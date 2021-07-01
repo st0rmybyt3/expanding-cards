@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.container {
+    display: flex;
+    width: 90vw;
+}
+.panel {
+    height: 90vh;
+    margin: 10px;
+    border-radius: 15px;
+    background-size: auto 100%;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    flex: 0.5;
+    cursor: pointer;
+    position: relative;
+    transition: flex .6s ease-in;
+}
+.panel h3 {
+    color: snow;
+    font-size: 25px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+}
+.panel.active {
+    flex: 5;
+}
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity .8s ease-in .3s;
+}
